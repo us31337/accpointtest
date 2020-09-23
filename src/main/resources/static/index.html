@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="/css/app.css" rel="stylesheet">
+</head>
+<body>
+<h1>Test page!</h1>
+<div id="treelist"></div>
+</body>
+<script>
+    $( document ).ready(function() {
+        $.ajax({
+            url: "/test",
+            success: function (data) {
+                $( '#treelist' ).html(data);
+            }
+        });
+    });
+</script>
+</html>
